@@ -1,0 +1,19 @@
+WITH calculate_AVG_CTC(customer_id, country, first_name, last_name, city, Total_amount_Paid)
+AS
+(
+select CU.customer_id, CO.country, CU.first_name, CU.last_name, CI.city,
+sum(P.amount) AS Total_amount_Paid 
+from customer CU
+INNER JOIN payment P ON CU.customer_id = P.customer_id
+INNER JOIN address A ON CU.address_id = A.address_id
+INNER JOIN city CI ON CI.city_id = A.city_id
+INNER JOIN country CO ON CO.country_id = CI.country_id
+WHERE city IN('Aurora','So Leopoldo','Teboksary','Ambattur','Shanwei','Citrus Heights','Iwaki','Tianjin',
+'Hami','Cianjur')
+GROUP BY CU.customer_id, country, first_name, last_name, city
+ORDER BY Total_amount_Paid DESC
+LIMIT 5)
+select customer_id, country, first_name, last_name, city, CAST(AVG(Total_amount_Paid) AS int) AS average
+FROM calculate_AVG_CTC
+GROUP BY customer_id, country, first_name, last_name, city
+ORDER BY average DESC
