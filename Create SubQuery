@@ -1,0 +1,27 @@
+WITH TOP_5CountriesCTE(country_id, country, Total_amount_Paid) AS						
+(						
+select CO.country_id, CO.country,						
+sum(P.amount) AS Total_amount_Paid from customer CU						
+INNER JOIN payment P ON CU.customer_id = P.customer_id						
+INNER JOIN address A ON CU.address_id = A.address_id						
+INNER JOIN city CI ON CI.city_id = A.city_id						
+INNER JOIN country CO ON CO.country_id = CI.country_id						
+GROUP BY CO.country_id, country						
+ORDER BY sum(P.amount) DESC						
+limit 5						
+)						
+select CI.country,						
+C.name AS category,						
+sum(P.amount) AS Total_revenue from film F						
+INNER JOIN Inventory II ON F.film_id = II.film_id						
+INNER JOIN rental R ON R.inventory_id = II.inventory_id						
+INNER JOIN payment P ON P.rental_id = R.rental_id						
+INNER JOIN customer CU ON CU.customer_id = R.customer_id						
+INNER JOIN address AD ON AD.address_id = CU.address_id						
+INNER JOIN city CT ON CT.city_id = AD.city_id						
+INNER JOIN country CI ON CI.country_id = CT.country_id						
+INNER JOIN film_category FC ON FC.film_id = II.film_id						
+INNER JOIN category C ON C.category_id = FC.category_id						
+WHERE country IN(select country from TOP_5CountriesCTE)						
+GROUP BY CI.country, category						
+ORDER BY CI.country, Total_revenue DESC						
