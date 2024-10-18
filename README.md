@@ -29,7 +29,7 @@ A bootcamp project that required writing SQL queries to join tables and retrieve
 
  #  Project Description
  ---
-for this project, I was provided a relational database and used PgAdmin 4 from Postgres to query this database. Here is a short list of some of the things I learned while completeing this project:
+For this project, I was provided a relational database and used PgAdmin 4 from Postgres to query this database. Here is a short list of some of the things I learned while completeing this project:
 ---
 - How to use DBVisualizer to to build an entity relationship diagram
 
@@ -53,13 +53,15 @@ I was given a list of questions that hypothetical executives and managers at Roc
 - Finding the top five customers within those cities
 
  ---
-
  ## Sample queries can be found in the files of this repository.
 
 Since most if this data exists on different tables, the main difficulty was in finding the correct keys and methods to use to join and filter those tables correctly and efficiently.
 
 In the end, the data we retrieved and organized was exported into CSV files and further visualized in Tableau. Here is a link to my final project, and here is a picture of the database ERD for reference:
+---
+![image](https://github.com/user-attachments/assets/ba7971da-a694-4940-9ff1-2a768f50f17b)
 
+---
 
 
    
