@@ -57,7 +57,8 @@ I was given a list of questions that hypothetical executives and managers at Roc
 
 Since most if this data exists on different tables, the main difficulty was in finding the correct keys and methods to use to join and filter those tables correctly and efficiently.
 
-In the end, the data we retrieved and organized was exported into CSV files and further visualized in Tableau. Here is a link to my final project, and here is a picture of the database ERD for reference:
+In the end, the data we retrieved and organized was exported into CSV files and further visualized in Tableau. Here is <a href = "https://public.tableau.com/app/profile/ritu.verma3648/viz/Tableaufirstfile_16846916122550/Story1?publish=yes"> Tableau first file | Tableau Public </a>
+to my final project, and here is a picture of the database ERD for reference:
 ---
 ![image](https://github.com/user-attachments/assets/ba7971da-a694-4940-9ff1-2a768f50f17b)
 
