@@ -33,28 +33,24 @@ for this project, I was provided a relational database and used PgAdmin 4 from P
 ---
 - How to use DBVisualizer to to build an entity relationship diagram
 
+- The effects of constraints on how data can be input into a relational database
 
-The effects of constraints on how data can be input into a relational database
+- Grouping and cleaning data in SQL
 
+- Finding and displaying max, min, averages of data using SQL queries
 
-Grouping and cleaning data in SQL
-
-
-Finding and displaying max, min, averages of data using SQL queries
-
-
-Writing relatively complex queries involving joins, subqueries and Common Table Expressions.
+- Writing relatively complex queries involving joins, subqueries and Common Table Expressions.
 
 ---
 I was given a list of questions that hypothetical executives and managers at Rockbuster wanted answered, and had to write my own SQL queries to retrieve the data needed to answer them. The main areas if interest were:
 
-Basic statistical summaries of sales information
+- Basic statistical summaries of sales information
     
-Finding which countries on Earth produced the most sales
+- Finding which countries on Earth produced the most sales
     
-Determing the top cities within those countries
+- Determing the top cities within those countries
     
-Finding the top five customers within those cities
+- Finding the top five customers within those cities
 
  ---
 
